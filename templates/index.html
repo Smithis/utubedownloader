@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+    <div class="container">
+    <div class="container-fluid">
+  <div id="header">
+    <center><h1>UTUBE<span style="color: red">DOWNLOAD</span></h1></center>
+    <hr>
+    <center><h4>Youtube downloader</h4></center>
+    
+    <div id="input-link">
+      <div class="container my-4">
+      <center>
+      <form action="" method="GET">
+<input type="text" name="yturl" width="50">
+</div>
+      </div>
+      <center>
+      <button class="btn btn-danger">Download</button></center>
+    </div>
+    </form>
+  </div>
+  <div class="container my-4">
+<img width="100%" height="100%" src="{{img}}"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></img>
+<div class="container my-4">
+<center>
+
+<p id="url" value="{{url}}">{{url}}</p>
+<p>video </p>
+<form action="download.html" method="GET">
+{% for i in lis%}
+  <div class="btn-group-vertical my-1">
+    <a href="/download?url={{url}}&tag={{i}}"<button type="button"  class="btn btn-primary">video({{i}})</button></a>
+  </div>
+{% endfor %}
+<hr>
+<p>audio</p>
+{% for j in son%}
+  <div class="btn-group-vertical my-1">
+    <a href="/download?url={{url}}&abr={{j.abr}}"<button type="button" class="btn btn-primary">songs({{j.abr}})</button></a>
+  </div>
+{% endfor%}
+</form>
+
+</center>
+<div>
+</div>
+
+
+</div>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
